@@ -1,7 +1,7 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import requests
+# import requests  # Commented out to prevent API call
 from PIL import Image
 import io
 import base64
@@ -97,7 +97,8 @@ if 'game_stats' not in st.session_state:
 video_file = st.file_uploader("Choose a 🎾 mp4 video file ", type=["mp4", "avi", "mov", "mkv"])
 st.button("Send the video file", type="primary")
 
-#and video_file is not None
+# Commented out API call to prevent it from being executed
+# and video_file is not None
 #     files = {"file": video_file.getvalue()}
 #     res = requests.post('http://34.155.42.77:8000/savefile', files=files)
 #     if res.ok:
@@ -155,30 +156,4 @@ st.button("Send the video file", type="primary")
 #         pass
 
 # def display_model_performance():
-#     if st.session_state['heatmap_img'] is not None and st.session_state['game_stats'] is not None:
-#         '''
-#         ### Model performance
-#         '''
-#         get_table_model_info(st.session_state['game_stats'])
-#         pass
-
-
-# if st.session_state['heatmap_img'] is not None and st.session_state['game_stats'] is not None:
-#     # Navigation setup
-#     PAGES = {
-#         "Game Statistics": display_game_stats,
-#         "Model Performance": display_model_performance
-#     }
-
-#     # Streamlit UI
-#     st.sidebar.title("Navigation")
-#     if st.session_state['game_stats'] is not None:
-#         selection = st.sidebar.radio("Go to", list(PAGES.keys()))
-#         page = PAGES[selection]
-#         page()
-#     else:
-#         st.write("Please upload a video to see the game statistics and model performance.")
-
-#     re_run = False
-
-# #st.image(graph_img, caption="Players and ball movement on y axis", use_column_width=True)
+#     if st.session_state['heatmap_img']
