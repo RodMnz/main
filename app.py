@@ -6,6 +6,8 @@ from PIL import Image
 import io
 import base64
 import plotly.graph_objects as go
+import time
+
 
 #####UPLOAD VERSION
 
@@ -96,6 +98,7 @@ if 'game_stats' not in st.session_state:
 
 video_file = st.file_uploader("Choose a 🎾 mp4 video file ", type=["mp4", "avi", "mov", "mkv"])
 st.button("Send the video file", type="primary")
+time.sleep(10)
 
 # Commented out API call to prevent it from being executed
 # and video_file is not None
