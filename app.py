@@ -97,8 +97,8 @@ if 'game_stats' not in st.session_state:
     st.session_state['game_stats'] = None
 
 video_file = st.file_uploader("Choose a 🎾 mp4 video file ", type=["mp4", "avi", "mov", "mkv"])
-st.button("Send the video file", type="primary")
-time.sleep(10)
+if st.button("Send the video file", type="primary"):
+    time.sleep(10)
 
 # Commented out API call to prevent it from being executed
 # and video_file is not None
